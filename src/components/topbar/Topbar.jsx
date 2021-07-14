@@ -4,7 +4,7 @@ import {Chat, Notifications, Person, Search} from "@material-ui/icons";
 
 export default function Topbar() {
     return (
-        <div className="topbarContainer">
+        <div className="topbar">
             <div className="topbarLeft">
                 <span className="logo">Social</span>
             </div>
