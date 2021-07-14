@@ -57,27 +57,27 @@ export default function Sidebar() {
                 <hr className="sidebarHr"/>
                 <ul className="sidebarFriendList">
                     <li className="sidebarFriend">
-                        <img src="../../../public/assets/avatar.jpg" alt="" className="sidebarFriendImg"/>
+                        <img src={"assets/avatar.jpg"} alt="" className="sidebarFriendImg"/>
                         <span className="sidebarFriendName">Minh Hiep</span>
                     </li>
                     <li className="sidebarFriend">
-                        <img src="../../../public/assets/avatar.jpg" alt="" className="sidebarFriendImg"/>
+                        <img src={"assets/avatar.jpg"} alt="" className="sidebarFriendImg"/>
                         <span className="sidebarFriendName">Minh Hiep</span>
                     </li>
                     <li className="sidebarFriend">
-                        <img src="../../../public/assets/avatar.jpg" alt="" className="sidebarFriendImg"/>
+                        <img src={"assets/avatar.jpg"} alt="" className="sidebarFriendImg"/>
                         <span className="sidebarFriendName">Minh Hiep</span>
                     </li>
                     <li className="sidebarFriend">
-                        <img src="../../../public/assets/avatar.jpg" alt="" className="sidebarFriendImg"/>
+                        <img src={"assets/avatar.jpg"} alt="" className="sidebarFriendImg"/>
                         <span className="sidebarFriendName">Minh Hiep</span>
                     </li>
                     <li className="sidebarFriend">
-                        <img src="../../../public/assets/avatar.jpg" alt="" className="sidebarFriendImg"/>
+                        <img src={"assets/avatar.jpg"} alt="" className="sidebarFriendImg"/>
                         <span className="sidebarFriendName">Minh Hiep</span>
                     </li>
                     <li className="sidebarFriend">
-                        <img src="../../../public/assets/avatar.jpg" alt="" className="sidebarFriendImg"/>
+                        <img src={"assets/avatar.jpg"} alt="" className="sidebarFriendImg"/>
                         <span className="sidebarFriendName">Minh Hiep</span>
                     </li>
                 </ul>

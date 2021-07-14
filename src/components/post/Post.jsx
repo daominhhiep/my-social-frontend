@@ -8,7 +8,7 @@ export default function Post() {
             <div className="postWrapper">
                 <div className="postTop">
                     <div className="postTopLeft">
-                        <img src="../../../public/assets/avatar.jpg" alt="" className="postProfileImg"/>
+                        <img src={"assets/avatar.jpg"} alt="" className="postProfileImg"/>
                         <span className="postUsername">Hiep</span>
                         <span className="postDate">5 min ago</span>
                         <Public className="postPrivacy"/>
