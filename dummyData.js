@@ -6,7 +6,7 @@ export const Users = [
     },
     {
         id: 2,
-        profilePicture: "assets/avatar.jpg",
+        profilePicture: "assets/avatar2.jpeg",
         username: "Minh Hiep",
     },
     {
@@ -55,7 +55,7 @@ export const Posts = [
     {
         id: 2,
         desc: "Ok",
-        photo: "assets/avatar.jpg",
+        photo: "assets/post2.jpeg",
         date: "5 mins ago",
         userId: 2,
         like: 123,
@@ -72,4 +72,13 @@ export const Posts = [
         comment: 54,
         share: 35,
     },
+]
+
+
+export const Groups = [
+    {
+        id: 1,
+        groupPicture: "assets/group.jpeg",
+        groupName: "Flinters",
+    }
 ]

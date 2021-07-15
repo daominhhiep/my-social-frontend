@@ -1,16 +1,26 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./post.css"
 import {MoreVert, Public} from "@material-ui/icons";
+import {Users} from "../../../dummyData";
 
 export default function Post(props) {
-    const { post } = props
+    const {post} = props
+    const [like, setLike] = useState(post.like);
+    const [isLiked, setIsLiked] = useState(false);
+    const user = Users.filter(u => u.id === post.userId)[0]
+
+    const likeHandler = () => {
+        setLike(isLiked ? like - 1 : like + 1)
+        setIsLiked(!isLiked)
+    }
+
     return (
         <div className="post">
             <div className="postWrapper">
                 <div className="postTop">
                     <div className="postTopLeft">
-                        <img src={"assets/avatar.jpg"} alt="" className="postProfileImg"/>
-                        <span className="postUsername">Hiep</span>
+                        <img src={user.profilePicture} alt="" className="postProfileImg"/>
+                        <span className="postUsername">{user.username}</span>
                         <span className="postDate">{post.date}</span>
                         <Public className="postPrivacy"/>
                     </div>
@@ -24,9 +34,9 @@ export default function Post(props) {
                 </div>
                 <div className="postBottom">
                     <div className="postBottomLeft">
-                        <img src={"assets/like.png"} alt="" className="icon"/>
-                        <img src={"assets/heart.png"} alt="" className="icon"/>
-                        <span className="postLikeCounter">{post.like} like</span>
+                        <img src={"assets/like.png"} alt="" className="icon" onClick={likeHandler}/>
+                        <img src={"assets/heart.png"} alt="" className="icon" onClick={likeHandler}/>
+                        <span className="postLikeCounter">{like} like</span>
                     </div>
                     <div className="postBottomRight">
                         <span className="postCommentText">{post.comment} Comment</span>

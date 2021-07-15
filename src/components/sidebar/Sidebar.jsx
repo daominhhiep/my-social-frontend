@@ -1,15 +1,18 @@
 import React from 'react'
 import "./sidebar.css"
+import Group from "../group/Group";
 import {
     Bookmark,
     Chat,
-    Event, Group,
+    Event,
     HelpOutline,
+    People,
     PlayCircleFilled,
     RssFeed,
     School,
     WorkOutlined
 } from "@material-ui/icons";
+import {Groups} from "../../../dummyData";
 
 export default function Sidebar() {
     return (
@@ -29,7 +32,7 @@ export default function Sidebar() {
                         <span className="sidebarListItemText">Videos</span>
                     </li>
                     <li className="sidebarListItem">
-                        <Group className="sidebarIcon"/>
+                        <People className="sidebarIcon"/>
                         <span className="sidebarListItemText">Groups</span>
                     </li>
                     <li className="sidebarListItem">
@@ -55,31 +58,11 @@ export default function Sidebar() {
                 </ul>
                 <button className="sidebarButton">Show More</button>
                 <hr className="sidebarHr"/>
-                <ul className="sidebarFriendList">
-                    <li className="sidebarFriend">
-                        <img src={"assets/avatar.jpg"} alt="" className="sidebarFriendImg"/>
-                        <span className="sidebarFriendName">Minh Hiep</span>
-                    </li>
-                    <li className="sidebarFriend">
-                        <img src={"assets/avatar.jpg"} alt="" className="sidebarFriendImg"/>
-                        <span className="sidebarFriendName">Minh Hiep</span>
-                    </li>
-                    <li className="sidebarFriend">
-                        <img src={"assets/avatar.jpg"} alt="" className="sidebarFriendImg"/>
-                        <span className="sidebarFriendName">Minh Hiep</span>
-                    </li>
-                    <li className="sidebarFriend">
-                        <img src={"assets/avatar.jpg"} alt="" className="sidebarFriendImg"/>
-                        <span className="sidebarFriendName">Minh Hiep</span>
-                    </li>
-                    <li className="sidebarFriend">
-                        <img src={"assets/avatar.jpg"} alt="" className="sidebarFriendImg"/>
-                        <span className="sidebarFriendName">Minh Hiep</span>
-                    </li>
-                    <li className="sidebarFriend">
-                        <img src={"assets/avatar.jpg"} alt="" className="sidebarFriendImg"/>
-                        <span className="sidebarFriendName">Minh Hiep</span>
-                    </li>
+                <h4 className="sidebarTitle">Your Shortcut</h4>
+                <ul className="sidebarGroupList">
+                    {Groups.map((g) => (
+                        <Group key={g.id} group={g}/>
+                    ))}
                 </ul>
             </div>
         </div>
